@@ -107,7 +107,9 @@ if (typeof value === "number") {
 //Ejercicio 9: Imprime en consola una lista del 0 al 10 con el bucle for
 
 //Escribe tu código aquí
-
+for (let valueList = 0; valueList < 11; valueList++) {
+    console.log(valueList);
+}
 
 //Ejercicio 10: Con un bucle for in imprime en pantalla todos los nombres, apellidos y su aporte a la sociedad de las programadoras de la historia contenidas en el array llamado 'programmers', Deberás imprimir el índice y la información de cada una de ellas de la siguiente manera: '0: Ada Lovelace, su aporte fue la máquina analítica'. 
 
@@ -135,33 +137,59 @@ const programmers = [
 ]
 
 //Escribe tu código aquí
-
+for (const indexNumber in programmers) {
+    console.log(`${indexNumber}: ${programmers[indexNumber].name} ${programmers[indexNumber].lastname}, su contribución fue ${programmers[indexNumber].knowledge}`);
+}
 
 //Ejercicio 11: Con un bucle for of imprime en consola "Hola, mi nombre es ... " y reemplaza los tres puntos con cada nombre del array dado.
 
 const names = ['Carla', 'Alex', 'Judith', 'Maria', 'Noelia']
 
 //Escribe tu código aquí
-
+for (const nameIntroduction of names) {
+    console.log("Hola, mi nombre es " + `${nameIntroduction}`);
+}
 
 //Ejercicio 12: Con un bucle while imprime en consola una lista del 1 al 5.
 
 //Escribe tu código aquí
+let whileToFive = 1;
 
+while (whileToFive < 6) {
+    console.log(whileToFive);
+    whileToFive++;
+}
 
 //Ejercicio 13: Realiza el mismo ejercicio anterior pero con un bucle do while.
 
 //Escribe tu código aquí
+let whileDoToFive = 1;
 
+do {
+    console.log(whileDoToFive);
+    whileDoToFive++;;
+} while (whileDoToFive < 6)
 
 //Ejercicio 14: Saludo Personalizado
 //Crea una función llamada saludar que tome un parámetro llamado nombre y devuelva un saludo personalizado. Luego, llama a la función con diferentes nombres y muestra el resultado en la consola.
 
 //Escribe tu código aquí
+function saludar(nombre) {
+    return `¡Hola, ${nombre}!`;
+}
 
+console.log(saludar("Sebastián"));
+console.log(saludar("Marcos"));
+console.log(saludar("Marta"));
 
 //Ejercicio 15: Calcular el Área de un Rectángulo
 //Crea una función llamada calcularAreaRectangulo que tome dos parámetros (ancho y alto) y devuelva el área del rectángulo. Luego, llama a la función con diferentes valores de ancho y alto y muestra el resultado en la consola.
 
 //Escribe tu código aquí
+function calcularAreaRectangulo(ancho, alto){
+    return ancho * alto;
+}
 
+console.log(calcularAreaRectangulo(2, 6));
+console.log(calcularAreaRectangulo(4, 12));
+console.log(calcularAreaRectangulo(16, 8));
